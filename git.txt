@@ -1,0 +1,40 @@
+git init - инициализирует пустой git репозиторий
+git branch - просмотр существующих веток
+git branch -a - просмотр всех (в т.ч. удаленных) веток
+git reset - снять индексацию с изменений
+git reset --hard HEAD - отмена измненений во всех файлах
+git reset --hard tagname - отмена последних коммитов, переход к состоянию tagname (в логах тоже не будут видны последние коммиты)
+git checkout <filename>  - отмена изменений в filename
+git checkout -b work - перейти в ветку work, флаг -b указывает, что если она не существует, то создать
+git status - показывает изменения
+git add . - добавить изменения ( . корень каталога, т.е. будут внесены изменения из всех файлов)
+git commit -m 'описание коммита'
+git commit --amend -m 'новое описание коммита' - изменение предыдущего коммита (после повторного add)
+git merge work - слияние с веткой work
+git merge origin/main
+git push origin master - отправка в репозиторий (ветка  master)
+git pull origin main - скачивание данных с сервера (ветка main)
+git pull - эквивалентно выполнению последовательно git fetch и git merge origin/master
+git log - список произведенных изменений
+git log --pretty=oneline - однострочный формат
+git log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short - история
+git log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short --all - вся история (даже отмененные коммиты)
+	--pretty="..." — определяет формат вывода.
+	%h — укороченный хэш коммита
+	%d — дополнения коммита («головы» веток или теги)
+	%ad — дата коммита
+	%s — комментарий
+	%an — имя автора
+	--graph — отображает дерево коммитов в виде ASCII-графика
+	--date=short — сохраняет формат даты коротким и симпатичным
+git tag tagname - текущее состояние помечается тегом tagname
+git checkout tagname - перейти к состоянию помеченному тегом tagname
+git tag - выводит доступные теги
+git tag -d tagname - удаляет tagname и коммиты, на которые он ссылался
+git revert HEAD - отмена последнего коммита
+git revert <hash> - отмена коммита по хешу
+git rebase master - объединить ветку с веткой master
+git clone repositoryname cloned_repositoryname - клонирование репозитория
+git remote - имя по умолчанию удаленного репозитория
+git remote show origin - более подробная информация об имени по умолчанию
+git fetch - забирает изменения удаленной ветки (напр забрать изменения из основной в клонированную)

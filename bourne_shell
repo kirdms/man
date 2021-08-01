@@ -1,0 +1,35 @@
+./scriptname.sh - запуск на выполение скрипта из текущей директории
+I=10
+mystring="my string" - объявление переменной
+echo $I $mystring - обращение к переменной
+I=$((I+7)) - арифметические действия
+$0, $1, $2... - доступ к аргументам командной строки скрипта ($0 - имя скрипта)
+test - проверяет разнообразные предположения (краткая запись [])
+    [ -f "file.txt" ] - существует ли файл с именем file.txt
+
+IF
+if [ -f "file.txt" ]; then    #аналогично if test -f "file.txt" ; then
+    cat "file.txt"
+else
+    echo "file file.txt not found"
+fi
+
+-le - меньше или равно
+-lt - меньше
+-gt - больше
+-ge - больше или равно
+
+while
+I=1
+while [ $I -le 100 ]; do
+    echo $I
+    I=$(( I + 1 ))
+done
+
+for
+for C in red orange yellow green blue indigo; do
+    echo $C
+done
+
+&& - И
+|| - ИЛИ:
