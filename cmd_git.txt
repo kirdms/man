@@ -1,8 +1,8 @@
-git config --global user.name "kirdms" 
-git config --global user.email kirdms@ya.ru 
+git config --global user.name "username" 
+git config --global user.email username@mail.com 
 git config --list 
 git init 
 git add .
 git commit -m "first commit" 
-git remote add origin https://github.com/kirdms/larapp.git
+git remote add origin https://github.com/username/repname.git
 git push -u origin master
