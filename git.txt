@@ -2,6 +2,7 @@ git init - инициализирует пустой git репозиторий
 git branch - просмотр существующих веток
 git branch -a - просмотр всех (в т.ч. удаленных) веток
 git reset - снять индексацию с изменений
+git reset HEAD .vscode - снять с индексации директорию .vscode
 git reset --hard HEAD - отмена измненений во всех файлах
 git reset --hard tagname - отмена последних коммитов, переход к состоянию tagname (в логах тоже не будут видны последние коммиты)
 git checkout <filename>  - отмена изменений в filename
